@@ -1,5 +1,32 @@
 Release History
 ===============
+0.8.3 (2025-08-06)
+-------------------
+**Bugfixes**
+- Fixed an issue with `searchCPEmatch` where batching/paging did not work correctly
+ - https://github.com/vehemont/nvdlib/issues/62
+- Modified to paging logic to better align with NIST published best practices for the NVD API
+
+0.8.2 (2025-08-06)
+-------------------
+**Bugfixes**
+- Fixed issues in `get.py` where invalid JSON returned from the API caused Response objects to be returned rather than dictionaries
+ - https://github.com/vehemont/nvdlib/issues/60
+ - https://github.com/vehemont/nvdlib/issues/61
+
+**Enhancements**
+- Added unit tests for `get.py`
+
+0.8.1 (2025-05-25)
+-------------------
+**Bugfixes**
+- Fixed a bug with the `delay` parameter in `get.py:__get_with_generator()`
+- Fixed some incorrect doc strings
+
+**Enhancements**
+- Added `__getattr__` implementation for better linter behavior
+- Added a proxy option for API calls
+
 0.8.0 (2025-03-19)
 -------------------
 **Bugfixes**
